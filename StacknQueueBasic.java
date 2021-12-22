@@ -27,9 +27,18 @@ public class StacknQueueBasic {
             myLinkedList.printNodes();
         }
     }
+    /*
+    Use case 3: create a queue by enqueuing new elements into the queue
+    */
+    public static void enqueueOp(MyLinkedList myLinkedList, Integer ...args){
+        for (Integer num:args){
+            Node <Integer> myNode = new Node<>(num);
+            myLinkedList.append(myNode);
+            myLinkedList.printNodes();
+        }
+    }
     public static void main(String []args){
         MyLinkedList myLinkedList = new MyLinkedList();
-        pushToStack(myLinkedList,70,30,56);
-        peekPopFromStack(myLinkedList);
+        enqueueOp(myLinkedList,56,30,70);
     }
 }

@@ -41,6 +41,21 @@ public class MyLinkedList {
       return tempNode;      
     }
     
+    //Append an element to the queue
+    public void append(INode enque_node){
+        INode tempNode;
+        if (this.head == null){
+            this.head = enque_node;
+        }
+        if (this.tail==null){
+            this.tail = enque_node;
+        }else {
+            tempNode = this.tail;
+            tempNode.setNext(enque_node);
+            this.tail = enque_node;
+        }
+    }
+    
     // To print the nodes of the linked list
     public void printNodes(){
         INode pres_node = this.head;
