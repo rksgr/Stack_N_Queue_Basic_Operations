@@ -15,8 +15,21 @@ public class StacknQueueBasic {
         myLinkedList.printNodes();
         return myLinkedList;
     }
+    /*
+    Use case 2: Peek into the stack and pop till it is empty
+    */
+    public static void peekPopFromStack(MyLinkedList myLinkedList){
+        // Print the nodes of present linked list
+        myLinkedList.printNodes();
+        // pop from stack till empty
+        while (myLinkedList.peekInto()){
+            myLinkedList.popElement();
+            myLinkedList.printNodes();
+        }
+    }
     public static void main(String []args){
         MyLinkedList myLinkedList = new MyLinkedList();
         pushToStack(myLinkedList,70,30,56);
+        peekPopFromStack(myLinkedList);
     }
 }

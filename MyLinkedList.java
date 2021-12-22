@@ -19,11 +19,33 @@ public class MyLinkedList {
         }
     }
     
+    //Peek into the stack
+    public boolean peekInto(){
+        boolean stack_not_empty = false;
+        if (this.head != null){
+            stack_not_empty = true;
+        }
+      return stack_not_empty;      
+    }
+    
+    // Pop an element from the stack
+    public INode popElement(){
+        INode tempNode;
+        if (this.head == null){
+            tempNode = null;
+            System.out.println("It is empty!");
+        }else{
+            tempNode = this.head;
+            this.head = this.head.getNext();
+        }
+      return tempNode;      
+    }
+    
     // To print the nodes of the linked list
     public void printNodes(){
         INode pres_node = this.head;
         if (pres_node == null){
-            System.out.println("The linked list is empty!");
+            System.out.println("It is empty!");
         }else {
             StringBuffer toPrint = new StringBuffer("The Nodes are: ");
             while (pres_node.getNext() != null){
