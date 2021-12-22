@@ -37,8 +37,19 @@ public class StacknQueueBasic {
             myLinkedList.printNodes();
         }
     }
+    /*
+    Use case 4: Dequeue elements from the queue
+    */
+    public static void dequeueOp(MyLinkedList myLinkedList){
+        myLinkedList.popElement();
+        myLinkedList.printNodes();
+    }
     public static void main(String []args){
         MyLinkedList myLinkedList = new MyLinkedList();
-        enqueueOp(myLinkedList,56,30,70);
+        enqueueOp(myLinkedList,56,30,70); 
+        dequeueOp(myLinkedList);
+        dequeueOp(myLinkedList);
+        dequeueOp(myLinkedList);
+        dequeueOp(myLinkedList);
     }
 }
